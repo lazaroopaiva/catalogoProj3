@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/details.css">
+    <title>Detalhes</title>
+    
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><img src="../img/mangekyou.png" alt=""></li>
+            <li>
+                <a href="/">
+                    <h1>My Anime</h1>
+                </a>
+            </li>
+            <li><a href="/">Cadastro</a> </li>
+            <li><a href="/">Animes</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div id="tudo">
+   <div id="titulo">
+   <h1> <%= listaAnime[id].nome%> </h1>
+</div>
+   <div id="img" >
+    <img src="<%= listaAnime[id].imagem%>" alt="">
+</div>
+   
+
+<div id="detalhes" >
+    <p>
+       <%= listaAnime[id].sinopse%>
+    </p>
+</div>
+</div>
+
+
+</section>
+    
+</body>
+</html>

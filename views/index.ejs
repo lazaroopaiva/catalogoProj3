@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>My Anime</title>
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li><img src="../img/mangekyou.png" alt=""></li>
+            <li>
+                <a href="/">
+                    <h1>My Anime</h1>
+                </a>
+            </li>
+            <li><a href="#cadastro">Cadastro</a> </li>
+            <li><a href="#cards">Animes</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <img src="../img/banner.png" alt="banner">
+    </header>
+
+
+    <main>
+
+        <section id='cards'>
+
+            <h2>Lista de Animes</h2>
+
+            <% listaAnime.forEach((anime)=> { %>
+                <div class="card">
+                    <img src="<%= anime.imagem %>" alt="">
+                    <h3>
+                        <%= anime.nome %>
+                    </h3>
+                   
+                    
+                    <p>Genero: <%= anime.genero %>
+                    </p>
+                    <a id="editar" href="/detalhes/<%= anime.id %>">Editar</a>
+                    <a id="apagar" href="/delete/<%= anime.id %>">Apagar</a>
+                    <a id="detalhes" href="/details/<%= anime.id%>"> Ver mais</a>
+                </div>
+                <% }) %>
+
+        </section>
+
+        <section id="cadastro">
+
+            <img src="">
+            <div>
+                <% if (anime==undefined) { %>
+                    <h2>Adicione um novo Anime!</h2>
+                    <form action="/create" method="POST">
+                        <label for="nome">Nome:</label> 
+                        <input type="text" required id="nome" name="nome">
+                        <label for="sinopse">Sinopse:</label>
+                        <input type="text" required id="sinopse" name="sinopse">
+                        <label for="genero">Genero:</label>
+                        <input type="text" required id="genero" name="genero">
+                        <label for="imagem">Link da Imagem</label>
+                        <input type="text" required id="imagem" name="imagem">
+                        <button id="btnCadastrar" type="submit">Cadastrar</button>
+                    </form>
+                    <% } else { %>
+                        <h2>Atualização de Anime</h2>
+                        <form action="/update/<%= anime.id %>" method="POST">
+                            <label for="nome">Nome:</label>
+                            <input type="text" required id="nome" name="nome" value="<%= anime.nome %>">
+                            <label for="sinopse">Sinopse:</label>
+                            <input type="text" required id="sinopse" name="sinopse" value="<%= anime.sinopse %>">
+                            <label for="genero">Genero:</label>
+                            <input type="text" required id="genero" name="genero" value="<%= anime.genero %>">
+                            <label for="imagem">Link da Imagem</label>
+                            <input type="text" required id="imagem" name="imagem" value="<%= anime.imagem %>">
+                            <button id="btnAtualizar" type="submit">Atualizar</button>
+                        </form>
+                        <% } %>
+            </div>
+
+            
+        </section>
+
+
+
+    </main>
+
+    <footer>
+        
+        
+    </footer>
+
+</body>
+
+</html>

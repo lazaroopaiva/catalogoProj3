@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, Arial;
+    scroll-behavior: smooth;
+  }
+
+  @media screen and (max-width: 375px){
+
+}
+@media screen and (max-width: 414px){
+
+}
+@media screen and (max-width: 390px){
+
+}
+@media screen and (max-width: 393px){
+
+}
+@media screen and (max-width: 360px){
+
+}
+@media screen and (max-width: 412px){
+
+}
+@media screen and (max-width: 820px){
+
+}
+@media screen and (max-width: 768px){
+
+}
+@media screen and (max-width: 912px){
+
+}
+@media screen and (max-width: 540px){
+
+}
+@media screen and (max-width: 1024px){
+
+}
+@media screen and (max-width: 1280px){
+
+}
+@media screen and (max-width: 150px){
+
+}
+section{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+div#titulo{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    
+   
+}
+div#detalhes{
+    width: 50%;
+    
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+div#detalhes p{
+    text-align: justify;
+    margin-top: 1rem;
+}
+
+div#tudo{
+    margin-left: auto;
+    margin-right: auto;
+    width: 30rem;
+    margin-top: 6rem;
+    background-color: rgba(255, 255, 255, 0.692);
+    border: solid 2px white;
+    
+    padding: 1.5rem;
+
+
+}
+div#img{
+    justify-content: center;
+    display: flex;
+}
+div#img img{
+    width: 10rem;
+    height: 10rem;
+    border: solid 1px black;
+}
+body{
+    background-image: url(/img/banner.png);
+    background-blend-mode: overlay;
+    background-color: rgb(120, 221, 221);
+}
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+  
+  nav ul li {
+    padding: 0.6rem;
+  }
+  
+  nav img {
+    width: 3rem;
+  }
+  
+  nav h1 {
+    color: rgb(12, 12, 12);
+    font-size: 1.4rem;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 1.3rem;
+  }
+
